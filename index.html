@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Discord ID to Creation Date</title>
+    <meta name="author" content="hugonun">
+    <meta name="description" content="Turn a Discord ID into Creation Date. Works with channel ID, server ID, message ID, user ID, and more.">
+    <meta name="keywords" content="discord,id,snowflake,unix,timestamp">
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data-10-year-range.min.js"></script>
+    <script src="main.js"></script> 
+  </head>
+  <body>
+    <h1>Discord ID to Creation Date</h1>
+    <h2>See the creation date of a server, channel, message or user using their Discord ID!</h2>
+    <p>Place the ID in the Discord ID field. Example: 459891664182312982</p>
+    <strong>Discord ID: </strong><input type="text" name="discordid" placeholder="459891664182312982" id="i-id"><br>
+    <button type="button" onclick="convert(document.getElementById('i-id').value)">Check the date!</button><br>
+	<br>
+    <hr>
+	<h3>Result:</h3>
+	<strong>Creation Date(24H format): </strong><span id="i-date24"></span><br>
+	<strong>Creation Date(12H format): </strong><span id="i-date12"></span><br>
+	<strong>Your timezone: </strong><span id="i-timezone"></span><br>
+	<strong>Time ago: </strong><span id="i-timeago"></span><br>
+	<strong>Unix timestamp: </strong><span id="i-timestamp"></span><br>
+	
+  </body>
+</html>
