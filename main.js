@@ -17,7 +17,7 @@ function convert(id) {
 	var unix = convertIDtoUnix(id.toString());
 	var timestamp = moment.unix(unix/1000);
 	document.getElementById('i-date24').innerHTML = timestamp.format('YYYY-MM-DD, HH:mm:ss');
-	document.getElementById('i-date12').innerHTML = timestamp.format('YYYY-MM-DD, h:mm:ss a');
+	document.getElementById('i-date12').innerHTML = timestamp.format('YYYY-MM-DD, h:mm:ss A');
 	document.getElementById('i-timezone').innerHTML = moment.tz.guess();
 	document.getElementById('i-timeago').innerHTML = timestamp.fromNow();
 	document.getElementById('i-timestamp').innerHTML = unix;
